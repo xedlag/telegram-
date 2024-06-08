@@ -1,1 +1,1 @@
-python gjcbot.py
+worker:python gjcbot.py
