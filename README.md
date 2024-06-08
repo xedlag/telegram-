@@ -22,28 +22,31 @@ export TELEGRAM_BOT_TOKEN=your-telegram-bot-token
 python your_bot_script.py
 
 部署
-要将机器人部署到 Heroku，请按照后续操作：
+要将机器人部署到Cyclic，请按照以下步骤操作：
 
-1.登录Heroku：
+1.登录Cyclic：
+Cyclic
 
-heroku login
+2.创建一个新的Cyclic应用：
+点击“Deploy to Cyclic”按钮。
 
-2.创建一个新的 Heroku 应用：
+3.在Cyclic上将你的机器人令牌设置为环境变量：
+TELEGRAM_BOT_TOKEN=your-telegram-bot-token
 
-heroku create your-app-name
+4.确保持续运行：
+Cyclic会在你的机器人崩溃时自动重启它。然而，你还应该在你的机器人代码中实现日志记录和错误处理，以处理任何意外问题。
 
-3.部署你的代码：
+### Step 2: Deploy to Cyclic
+（1）. **登录Cyclic**：
+   [Cyclic](https://www.cyclic.sh/)
 
-git add .
-git commit -m "Initial commit"
-git push heroku master
+（2）. **创建一个新的Cyclic应用**：
+   点击“Deploy to Cyclic”按钮。
 
-4.在Heroku上将你的机器人一起使用环境变量：
+（3）. **在Cyclic上将你的机器人令牌设置为环境变量**：
+   ```sh
+   TELEGRAM_BOT_TOKEN=your-telegram-bot-token
 
-heroku config:set TELEGRAM_BOT_TOKEN=your-telegram-bot-token
-
-5.我们通过我们的机器人实现日常运行记录和错误处理，确保日常运行顺利。
-
-
-请将 `yourusername`、`your-repo-name` 和 `your-telegram-bot-token` 替换为你的实际GitHub用户名、仓库名和Telegram机器人令牌。
+（4）.确保持续运行：
+Cyclic会在你的机器人崩溃时自动重启它。然而，你还应该在你的机器人代码中实现日志记录和错误处理，以处理任何意外问题。
 
